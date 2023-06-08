@@ -1,0 +1,1 @@
+/home/levi/AndroidStudioProjects/Proyectos/OpenCvManipulacion/opencv/build/intermediates/cxx/Debug/6q4j4u6w/obj/arm64-v8a

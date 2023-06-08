@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/levi/AndroidStudioProjects/Proyectos/OpenCvManipulacion/opencv/libcxx_helper/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/levi/Android/Sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/home/levi/AndroidStudioProjects/Proyectos/OpenCvManipulacion/opencv/.cxx/RelWithDebInfo/1v603c6c/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/levi/Android/Sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/home/levi/AndroidStudioProjects/Proyectos/OpenCvManipulacion/opencv/.cxx/RelWithDebInfo/1v603c6c/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opencv_jni_shared::@6890427a1f51a3e7e1df": {
+      "artifactName": "opencv_jni_shared",
+      "abi": "x86",
+      "output": "/home/levi/AndroidStudioProjects/Proyectos/OpenCvManipulacion/opencv/.cxx/RelWithDebInfo/1v603c6c/x86/libopencv_jni_shared.a",
+      "runtimeFiles": []
+    }
+  }
+}
