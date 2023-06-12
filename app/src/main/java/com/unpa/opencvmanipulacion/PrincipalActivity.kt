@@ -24,6 +24,7 @@ import org.opencv.android.Utils
 import org.opencv.core.Core
 import org.opencv.core.CvType
 import org.opencv.core.Mat
+import org.opencv.core.Point
 import org.opencv.core.Scalar
 import org.opencv.core.Size
 import org.opencv.imgproc.Imgproc
@@ -40,6 +41,9 @@ class PrincipalActivity : AppCompatActivity() {
     private lateinit var imageBinaria: ImageView
     private lateinit var imageContorno: ImageView
     private lateinit var imageSegRojo: ImageView
+    private lateinit var imageRotar: ImageView
+    private lateinit var imagePrescalada: ImageView
+    private lateinit var imageTrasladada: ImageView
 
     private val REQUEST_IMAGE_CAPTURE = 1
     private val CAMERA_PERMISSION_REQUEST_CODE = 2
@@ -74,6 +78,9 @@ class PrincipalActivity : AppCompatActivity() {
         imageBinaria = findViewById(R.id.binaria)
         imageContorno = findViewById(R.id.contornos)
         imageSegRojo = findViewById(R.id.segRojo)
+        imageRotar = findViewById(R.id.rotarImg)
+        imagePrescalada = findViewById(R.id.preEscalada)
+        imageTrasladada = findViewById(R.id.trasladada)
 
         val btnCargarImagen = findViewById<Button>(R.id.btnLoad)
         btnCargarImagen.setOnClickListener {
@@ -164,6 +171,11 @@ class PrincipalActivity : AppCompatActivity() {
 
             processImage(imageBitmap)
 
+            rotarImagen(imageBitmap)
+
+            preScaleImage(imageBitmap)
+
+            preTranslateImage(imageBitmap)
         }
     }
 
@@ -318,6 +330,31 @@ class PrincipalActivity : AppCompatActivity() {
 
     }
 
+    private fun rotarImagen(bitmap: Bitmap?){
+        // Cargar imagen original
+        val srcMat = Mat()
+        Utils.bitmapToMat(bitmap, srcMat)
+        // Obtener el tamaño de la imagen
+        val size = Point(srcMat.cols().toDouble(), srcMat.rows().toDouble())
+        // Obtener el tamaño de la imagen
+        val tam = srcMat.size()
+
+        // Definir la matriz de transformación para la rotación
+        val rotationMatrix = Imgproc.getRotationMatrix2D(size, 45.0, 1.0)
+
+        // Realizar la rotación de la imagen
+        val rotatedMat = Mat()
+        Imgproc.warpAffine(srcMat, rotatedMat, rotationMatrix, tam, Imgproc.INTER_LINEAR)
+
+        // Convertir la imagen resultante a Bitmap
+        val outputBitmap = Bitmap.createBitmap(rotatedMat.cols(), rotatedMat.rows(), Bitmap.Config.ARGB_8888)
+        Utils.matToBitmap(rotatedMat, outputBitmap)
+
+        // Mostrar la imagen resultante en el ImageView
+        imageRotar.setImageBitmap(outputBitmap)
+
+    }
+
     private fun processImage(bitmap: Bitmap?) {
         // Cargar imagen original
         val srcMat = Mat()
@@ -345,6 +382,60 @@ class PrincipalActivity : AppCompatActivity() {
 
         // Mostrar la imagen resultante en el ImageView
         imageSegRojo.setImageBitmap(outputBitmap)
+    }
+
+    private fun preTranslateImage(bitmap: Bitmap?) {
+        // Cargar imagen original
+        val srcMat = Mat()
+        Utils.bitmapToMat(bitmap, srcMat)
+
+        // Obtener el tamaño de la imagen
+        val size = Point(srcMat.cols().toDouble(), srcMat.rows().toDouble())
+        // Obtener el tamaño de la imagen
+        val tam = srcMat.size()
+
+        // Definir la matriz de transformación para el desplazamiento
+        val preTranslationMatrix = Mat.zeros(2, 3, CvType.CV_32FC1)
+        preTranslationMatrix.put(0, 0, 1.0, 0.0, 100.0)
+        preTranslationMatrix.put(1, 0, 0.0, 1.0, 50.0)
+
+        // Realizar el desplazamiento previo de la imagen
+        val preTranslatedMat = Mat()
+        Imgproc.warpAffine(srcMat, preTranslatedMat, preTranslationMatrix, tam, Imgproc.INTER_LINEAR)
+
+        // Convertir la imagen resultante a Bitmap
+        val preTranslatedBitmap = Bitmap.createBitmap(preTranslatedMat.cols(), preTranslatedMat.rows(), Bitmap.Config.ARGB_8888)
+        Utils.matToBitmap(preTranslatedMat, preTranslatedBitmap)
+
+        // Mostrar la imagen resultante en el ImageView
+        imageTrasladada.setImageBitmap(preTranslatedBitmap)
+    }
+
+    private fun preScaleImage(bitmap: Bitmap?) {
+        // Cargar imagen original
+        val srcMat = Mat()
+        Utils.bitmapToMat(bitmap, srcMat)
+
+        // Obtener el tamaño de la imagen
+        val size = Point(srcMat.cols().toDouble(), srcMat.rows().toDouble())
+        // Obtener el tamaño de la imagen
+        val tam = srcMat.size()
+
+        // Definir la matriz de transformación para el escalado
+        val preScalingMatrix = Mat.zeros(2, 3, CvType.CV_32FC1)
+        preScalingMatrix.put(0, 0, 0.5, 0.0, 0.0)
+        preScalingMatrix.put(1, 0, 0.0, 0.5, 0.0)
+
+        // Realizar el escalado previo de la imagen
+        val preScaledMat = Mat()
+        Imgproc.warpAffine(srcMat, preScaledMat, preScalingMatrix, tam, Imgproc.INTER_LINEAR)
+
+        // Convertir la imagen resultante a Bitmap
+        val preScaledBitmap = Bitmap.createBitmap(preScaledMat.cols(), preScaledMat.rows(), Bitmap.Config.ARGB_8888)
+        Utils.matToBitmap(preScaledMat, preScaledBitmap)
+
+        // Mostrar la imagen resultante en el ImageView
+        imagePrescalada.setImageBitmap(preScaledBitmap)
     }
 
     private fun segmentacionColores(bitmap: Bitmap?){
