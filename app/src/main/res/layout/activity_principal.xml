@@ -6,19 +6,30 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/bg"
     tools:context=".PrincipalActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -38,13 +49,14 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera"></ImageView>
+                    style="@style/viewCamera"
+                    />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Imagen original"
-                    android:textAlignment="center" />
+                    android:text="Imagen original" />
             </LinearLayout>
 
             <LinearLayout
@@ -59,13 +71,14 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera"></ImageView>
+                    style="@style/viewCamera"
+                    />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escala de grises"
-                    android:textAlignment="center" />
+                    android:text="Escala de grises" />
             </LinearLayout>
 
             <LinearLayout
@@ -80,13 +93,14 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera"></ImageView>
+                    style="@style/viewCamera"
+                    />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rojo"
-                    android:textAlignment="center" />
+                    android:text="Rojo" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,13 +115,13 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera"></ImageView>
+                    style="@style/viewCamera" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Azul"
-                    android:textAlignment="center" />
+                    android:text="Azul" />
             </LinearLayout>
 
             <LinearLayout
@@ -122,13 +136,13 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera"></ImageView>
+                    style="@style/viewCamera" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Verde"
-                    android:textAlignment="center" />
+                    android:text="Verde" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,14 +157,15 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Imagen Binaria"
-                    android:textAlignment="center" />
+                    android:text="Imagen Binaria" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,14 +178,15 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Imagen Contornos"
-                    android:textAlignment="center" />
+                    android:text="Imagen Contornos" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -183,14 +199,15 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Segmentacion Rojo "
-                    android:textAlignment="center" />
+                    style="@style/text" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -203,14 +220,15 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Rotar Imagen"
-                    android:textAlignment="center" />
+                    style="@style/text" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -223,14 +241,16 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Imagen trasladada"
-                    android:textAlignment="center" />
+                    style="@style/text"
+                    />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -243,13 +263,14 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_camera" />
+                    style="@style/viewCamera" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Imagen Preescalada"
-                    android:textAlignment="center" />
+                    style="@style/text"
+                    />
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
@@ -259,32 +280,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        style="@style/footer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="0dp">
         <Button
             android:id="@+id/btnCamera"
             android:text="Tomar Foto"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="5dp"
-            android:drawableLeft="@drawable/ic_camera"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="0dp"
+            android:drawableLeft="@drawable/ic_camera_light"
+            android:background="@drawable/shaped_white"
+            android:layout_marginBottom="16dp"
             />
 
         <Button
             android:id="@+id/btnLoad"
             android:text="Cargar Foto"
+            android:background="@drawable/shaped_white"
+            app:backgroundTint="@color/black"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
             android:drawableLeft="@drawable/ic_upload"
+            android:layout_marginBottom="16dp"
             />
     </LinearLayout>
 

@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <color name="night">#0C120C</color>
+    <color name="enggine">#F86624</color>
+    <color name="enggine1">#F9C80E</color>
+
+    <color name="itm">#1E88E5</color>
+    <color name="dim">#6D7275</color>
+    <color name="ash">#C7D6D5</color>
+    <color name="ghost">#ECEBF3</color>
+
+    <!-- Light Secondary color -->
+    <color name="gris">#eee</color>
+
+    <!-- Dark Secondary color -->
+    <color name="gray">#2d2d2d</color>
+
 </resources>

@@ -12,10 +12,12 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.opencv.android.OpenCVLoader
@@ -67,7 +69,14 @@ class PrincipalActivity : AppCompatActivity() {
         // Inicializar OpenCV
         OpenCVLoader.initDebug()
 
-        title = " "
+        title = "Bienvenido!"
+        val toolbar: Toolbar = findViewById(R.id.materialToolbar)
+        setSupportActionBar(toolbar)
+        // Obtén una referencia al TextView del título del Toolbar
+        val titleTextView = toolbar.getChildAt(0) as? TextView
+
+        // Cambia el color del texto del título
+        titleTextView?.setTextColor(ContextCompat.getColor(this, R.color.white))
 
         //image = findViewById<ImageView>(R.id.image)
         imageOriginal = findViewById(R.id.ImgOriginal)
