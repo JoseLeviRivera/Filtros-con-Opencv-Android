@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/bg"
     tools:context=".PrincipalActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -18,8 +17,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -44,13 +42,12 @@
 
                 <ImageView
                     android:id="@+id/ImgOriginal"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera"
-                    />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -66,13 +63,12 @@
 
                 <ImageView
                     android:id="@+id/grises"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera"
-                    />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -80,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:text="Escala de grises" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,13 +84,12 @@
 
                 <ImageView
                     android:id="@+id/segrojo"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera"
-                    />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -109,12 +105,12 @@
 
                 <ImageView
                     android:id="@+id/segazul"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -130,12 +126,12 @@
 
                 <ImageView
                     android:id="@+id/segverde"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -151,13 +147,12 @@
 
                 <ImageView
                     android:id="@+id/rojo"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera"
-                    />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -173,12 +168,12 @@
 
                 <ImageView
                     android:id="@+id/azul"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -194,12 +189,12 @@
 
                 <ImageView
                     android:id="@+id/verde"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -215,12 +210,12 @@
 
                 <ImageView
                     android:id="@+id/binaria"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -236,12 +231,12 @@
 
                 <ImageView
                     android:id="@+id/contornos"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     style="@style/text"
@@ -257,18 +252,18 @@
 
                 <ImageView
                     android:id="@+id/rotarImg"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rotar Imagen"
-                    style="@style/text" />
+                    android:text="Rotar Imagen" />
             </LinearLayout>
 
             <LinearLayout
@@ -278,19 +273,18 @@
 
                 <ImageView
                     android:id="@+id/trasladada"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Imagen trasladada"
-                    style="@style/text"
-                    />
+                    android:text="Imagen trasladada" />
             </LinearLayout>
 
             <LinearLayout
@@ -300,61 +294,59 @@
 
                 <ImageView
                     android:id="@+id/preEscalada"
+                    style="@style/viewCamera"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    style="@style/viewCamera" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
+                    style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Imagen Preescalada"
-                    style="@style/text"
-                    />
+                    android:text="Imagen Preescalada" />
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
+        style="@style/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:orientation="horizontal"
-        style="@style/footer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp">
+        app:layout_constraintStart_toStartOf="parent">
+
         <Button
             android:id="@+id/btnCamera"
-            android:text="Tomar Foto"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="0dp"
-            android:drawableLeft="@drawable/ic_camera_light"
-            android:background="@drawable/shaped_white"
             android:layout_marginBottom="16dp"
-            />
+            android:layout_weight="1"
+            android:background="@drawable/shaped_white"
+            android:drawableLeft="@drawable/ic_camera_light"
+            android:text="Tomar Foto" />
 
         <Button
             android:id="@+id/btnLoad"
-            android:text="Cargar Foto"
-            android:background="@drawable/shaped_white"
-            app:backgroundTint="@color/black"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
-            android:drawableLeft="@drawable/ic_upload"
             android:layout_marginBottom="16dp"
-            />
+            android:layout_weight="1"
+            android:background="@drawable/shaped_white"
+            android:drawableLeft="@drawable/ic_upload"
+            android:text="Cargar Foto"
+            app:backgroundTint="@color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
