@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/downloadIcon"
-        android:title="Buscar"
-        android:icon="@drawable/ic_guardar"
+        android:id="@+id/salir"
+        android:title="Salir"
+        android:icon="@drawable/ic_logout"
         app:showAsAction="always" />
 </menu>

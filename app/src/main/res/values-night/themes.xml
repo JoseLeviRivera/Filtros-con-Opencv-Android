@@ -42,7 +42,7 @@
     </style>
 
     <style name="viewCamera">
-        <item name="android:src">@drawable/ic_camera_light</item>
+        <item name="android:src">@drawable/img</item>
     </style>
 
 </resources>
