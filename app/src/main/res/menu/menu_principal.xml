@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/alert"
+        android:title="CopyRight"
+        android:icon="@drawable/ic_alert"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/salir"
         android:title="Salir"
         android:icon="@drawable/ic_logout"

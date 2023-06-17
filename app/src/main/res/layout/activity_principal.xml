@@ -43,6 +43,7 @@
                 <ImageView
                     android:id="@+id/ImgOriginal"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -64,6 +65,7 @@
                 <ImageView
                     android:id="@+id/grises"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -85,6 +87,7 @@
                 <ImageView
                     android:id="@+id/segrojo"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -95,7 +98,7 @@
                     style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escala gris en Rojo" />
+                    android:text="Segmentacion rojo" />
             </LinearLayout>
 
             <LinearLayout
@@ -106,6 +109,7 @@
                 <ImageView
                     android:id="@+id/segazul"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -116,7 +120,7 @@
                     style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escala de gris en Azul" />
+                    android:text="Segmentacion azul" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,6 +131,7 @@
                 <ImageView
                     android:id="@+id/segverde"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -137,7 +142,7 @@
                     style="@style/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escala de gris en Verde" />
+                    android:text="Segmentacion verde" />
             </LinearLayout>
 
             <LinearLayout
@@ -148,6 +153,7 @@
                 <ImageView
                     android:id="@+id/rojo"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -169,6 +175,7 @@
                 <ImageView
                     android:id="@+id/azul"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -190,6 +197,7 @@
                 <ImageView
                     android:id="@+id/verde"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -211,6 +219,7 @@
                 <ImageView
                     android:id="@+id/binaria"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -232,6 +241,7 @@
                 <ImageView
                     android:id="@+id/contornos"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -253,6 +263,7 @@
                 <ImageView
                     android:id="@+id/rotarImg"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -274,6 +285,7 @@
                 <ImageView
                     android:id="@+id/trasladada"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"
@@ -295,6 +307,7 @@
                 <ImageView
                     android:id="@+id/preEscalada"
                     style="@style/viewCamera"
+                    android:scaleType="centerCrop"
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_marginStart="10dp"

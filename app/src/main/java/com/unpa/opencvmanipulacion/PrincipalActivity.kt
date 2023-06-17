@@ -32,6 +32,8 @@ import org.opencv.core.Mat
 import org.opencv.core.Point
 import org.opencv.core.Scalar
 import org.opencv.imgproc.Imgproc
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class PrincipalActivity : AppCompatActivity() {
@@ -77,7 +79,7 @@ class PrincipalActivity : AppCompatActivity() {
         // Se carga la libreria de OpenCV
         OpenCVLoader.initDebug()
 
-        title = "¡Bienvenido!"  //Agrega un texto al toolbar
+        title = getTimeGreet()
         val toolbar: Toolbar = findViewById(R.id.materialToolbar)  //Referencia del toolbar
         setSupportActionBar(toolbar) //Agrega el toolbar declarado como default a la actividad
         val titleTextView = toolbar.getChildAt(0) as? TextView  // Obtén una referencia al TextView del título del Toolbar
@@ -439,6 +441,10 @@ class PrincipalActivity : AppCompatActivity() {
             showExitConfirmationDialog()
             return true
         }
+        if(item.itemId == R.id.alert){
+            showCopyrightDialog()
+            return true
+        }
         return super.onOptionsItemSelected(item)
     }
 
@@ -498,4 +504,41 @@ class PrincipalActivity : AppCompatActivity() {
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
+
+    private fun showCopyrightDialog() {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setTitle("Derechos de Autor")
+        dialogBuilder.setMessage(
+            "© 2023 José Levi Rivera Mendoza\n\n" +
+                    "Todos los derechos reservados.\n\n" +
+                    "Queda estrictamente prohibida la reproducción total o parcial de esta aplicación, " +
+                    "ya sea por medios electrónicos, mecánicos, fotocopia, grabación u otros métodos, " +
+                    "sin el permiso previo por escrito del titular de los derechos de autor.\n\n" +
+                    "Esta aplicación y todos sus contenidos están protegidos por las leyes de derechos de " +
+                    "autor y otras leyes de propiedad intelectual. Cualquier uso no autorizado de esta " +
+                    "aplicación o de sus contenidos constituye una violación de los derechos de autor y " +
+                    "puede estar sujeto a acciones legales.\n\n" +
+                    "Se permite la utilización de esta aplicación únicamente para fines personales y no " +
+                    "comerciales. Queda prohibida cualquier modificación, distribución, reventa, reproducción " +
+                    "o uso no autorizado de los materiales contenidos en esta aplicación sin el consentimiento " +
+                    "expreso del titular de los derechos de autor.\n\n" +
+                    "Para obtener permisos, licencias o cualquier consulta relacionada con los derechos de autor " +
+                    "de esta aplicación, por favor, póngase en contacto con joselevirm@gmail.com."
+        )
+        dialogBuilder.setPositiveButton("Aceptar", null)
+        val dialog = dialogBuilder.create()
+        dialog.show()
+    }
+
+    private fun getTimeGreet():String {
+        val cal = Calendar.getInstance()
+        val hourOfDay = cal.get(Calendar.HOUR_OF_DAY)
+        val greeting = when (hourOfDay) {
+            in 6..11 -> "Buenos días "
+            in 12..17 -> "Buenas tardes "
+            else -> "Buenas noches "
+        }
+        return greeting
+    }
+
 }

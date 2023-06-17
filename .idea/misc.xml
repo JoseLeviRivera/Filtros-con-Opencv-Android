@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_alert.xml" value="0.167" />
         <entry key="app/src/main/res/drawable/ic_camera.xml" value="0.1425" />
         <entry key="app/src/main/res/drawable/ic_camera_light.xml" value="0.1425" />
         <entry key="app/src/main/res/drawable/ic_guardar.xml" value="0.1425" />
